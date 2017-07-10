@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- So that mobile will display zoomed in -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Palanquin:100' rel='stylesheet' type='text/css'>
+    <title id="lang_title">EQL - 顧客回函表</title>
+
+    <style type="text/css">
+
+    *{
+    font-family:'Palanquin','微軟正黑體', sans-serif;
+    }
+    h1, .h1 {
+      font-family:'Palanquin','微軟正黑體', sans-serif;
+      text-align: left;
+      color: #727171;
+    }
+
+    h3, .h3 {
+      font-family:'Palanquin','微軟正黑體', sans-serif;
+      text-align: left;
+      color: #727171;
+    }
+
+    h4, .h4 {
+      font-family:'Palanquin','微軟正黑體', sans-serif;
+      text-align: left;
+      color: #727171;
+    }
+
+    h5, .h5 {
+      font-family:'Palanquin','微軟正黑體', sans-serif;
+      text-align: left;
+      color: #727171;
+    }
+
+    h6, .h6 {
+      font-family:'Palanquin','微軟正黑體', sans-serif;
+      text-align: left;
+      color: #ffffff;
+    }
+
+    .container {
+     padding-top: 15px;
+     padding-right: 15px;
+     padding-left: 15px;
+     margin-right: auto;
+     margin-left: auto;
+  }
+
+    .title_img{
+      display: block;
+      margin:0 auto;
+    }
+
+    .class1{
+      position: relative;
+      display: inline-block;
+      margin-right: 12px;
+      margin-left: 12px;
+      margin-bottom: 10px;
+      padding-left: 6px;
+      padding-right: 10px;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+
+    media (max-width: 767px) {
+    }
+
+    @media (max-width: 480px) {
+    }
+
+    @media (min-width: 768px) and (max-width: 979px) {
+      body{
+        margin: 0 ;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    }
+
+    @media (min-width: 980px) {
+    }
+
+    @media (min-width: 1200px) {
+    }
+
+    input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+}
+label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2196F3;
+  border-radius: 4px;
+  z-index: -1;
+}
+input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+/* Checked */
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  padding-left: 10px;
+  color: #fff;
+}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #2196F3;
+}
+/* Transition */
+label,
+label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* radio */
+fieldset {
+	width: 100%;
+	text-align: left;
+  border:0
+}
+
+// INPUTS // ============================== //
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  background: none;
+  color: #727171;
+  font-size: 16px;
+  padding: 8px 8px 8px 4px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #727171;
+  &:focus {
+    outline: none;
+  }
+  &:focus ~ label,
+  &:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color:#2196F3;
+  }
+  &:focus ~ .bar:before {
+    width: 320px;
+  }
+}
+
+
+/*===================================================================================*/
+
+.btn
+{
+    color: #FFF;
+    padding: 10px 20px;
+    margin: 15px 0;
+    /*font-family: "Open Sans", Helvetica, Arial, sans-serif;*/
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: none;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.btn-sm
+{
+    padding: 7px 13px;
+    font-size: 12px;
+}
+
+.btn-lg
+{
+    padding: 16px 26px;
+    font-size: 16px;
+}
+
+.btn-xl
+{
+    padding: 18px 30px;
+    font-size: 24px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+h1 .btn,
+h2 .btn,
+h3 .btn,
+h4 .btn,
+p .btn
+{
+    margin-left: 15px;
+}
+
+/* Button DISABLED */
+
+.disabled a
+{
+    cursor: not-allowed;
+}
+
+/* Button DEFAULT */
+
+.btn.btn-default
+{
+    background: #2196F3;
+    box-shadow: 0 2px #2196F3;
+    color: #2196F3;
+}
+
+.btn.btn-default:hover
+{
+    background: #2196F2;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+
+    </style>
+  </head>
+<body>
+
+  <section class="title_img">
+            <img src="images/pic_1.png" class="img-responsive" width="100%" id="lang_control_img">
+  </section>
+
+<div id="text" class="container">
+<h3>嗨, Jerry</h3>
+<h4>首先感謝您對EQL Ripple的支持，這陣子的使用是否讓生活變得更方便又美好，為了提供最佳的智能家居體驗，我們特別想邀請您將寶貴又有趣的想法與我們分享共創，未來有機會會成真喔，填寫完畢後，線上商場折價卷等著你拿。</h4>
+</div>
+<p>
+<div class="container">
+<form>
+  <div id="gender">
+<h4>* 1 性別：</h4>
+<input type="radio" name="rd" id="male" />
+  <label for="male">男</label>
+  <input type="radio" name="rd" id="female" />
+  <label for="female">女</label>
+</div>
+<p>
+  <br>
+<div id="age">
+  <h4>*2年齡：</h4>
+  <input type="radio" name="rd1" id="under 18" />
+<label for="under 18">18歲以下</label>
+<input type="radio" name="rd1" id="19-22" />
+<label for="19-22">19-22歲</label>
+<input type="radio" name="rd1" id="23-30" />
+<label for="23-30">23-30歲</label>
+<input type="radio" name="rd1" id="31-40" />
+<label for="31-40">31-40歲</label>
+<input type="radio" name="rd1" id="41-50" />
+<label for="41-50">41-50歲</label>
+<input type="radio" name="rd1" id="51-60" />
+<label for="51-60">51-60歲</label>
+<input type="radio" name="rd1" id="71" />
+<label for="71">65歲以上</label>
+</div>
+<p>
+  <br>
+<div id="job_occupation">
+<h4>3.職業：工作職稱或是工作內容</h4>
+<input name="job_occupation" id="job_occupation" type="text" required />
+</div>
+<p>
+  <br>
+<div id="setting_place">
+<h4>*4.目前將EQL小管家放置地點(可複選)：</h4>
+<input type="checkbox" name="cb" id="cb1" />
+  <label for="cb1">客廳</label>
+<input type="checkbox" name="cb" id="cb2" />
+  <label for="cb2">臥室</label>
+<input type="checkbox" name="cb" id="cb3" />
+  <label for="cb3">廚房</label>
+<input type="checkbox" name="cb" id="cb4" />
+  <label for="cb4">小孩房</label>
+<input type="checkbox" name="cb" id="cb5" />
+  <label for="cb5">走道</label>
+<input type="checkbox" name="cb" id="cb6" />
+  <label for="cb6">客房</label>
+<input type="checkbox" name="cb" id="cb7" />
+  <label for="cb7">浴室</label>
+<input type="checkbox" name="cb" id="cb8" />
+  <label for="cb8">出租房間</label>
+<input type="checkbox" name="cb" id="cb9" />
+  <label for="cb9">陽台</label>
+<input type="checkbox" name="cb" id="cb10" />
+  <label for="cb10">玄關</label>
+<input type="checkbox" name="cb" id="cb11" />
+  <label for="cb11">其他</label><input name="others" id="cb11" type="text" required />
+</div>
+<p>
+  <br>
+<div id="eql_product">
+<h4>*5.您還對EQL哪些產品有興趣呢？</h4>
+<input type="checkbox" name="cb1" id="cb12" />
+  <label for="cb12">血壓計</label>
+<input type="checkbox" name="cb1" id="cb13" />
+    <label for="cb13">生髮帽</label>
+<input type="checkbox" name="cb1" id="cb14" />
+    <label for="cb14">遠紅外線眼膜</label>
+<input type="checkbox" name="cb1" id="cb15" />
+    <label for="cb15">懸浮粒子感測器</label>
+<input type="checkbox" name="cb1" id="cb16" />
+    <label for="cb16">空氣清淨機</label>
+<input type="checkbox" name="cb1" id="cb17" />
+    <label for="cb17">智能插座</label>
+<input type="checkbox" name="cb1" id="cb18" />
+    <label for="cb18">智慧Led燈泡</label>
+<input type="checkbox" name="cb" id="cb19" />
+    <label for="cb19">居家攝影機</label>
+<input type="checkbox" name="cb1" id="cb20" />
+    <label for="cb20">智能門鎖</label>
+<input type="checkbox" name="cb1" id="cb21" />
+    <label for="cb21">極光美肌面膜</label>
+<input type="checkbox" name="cb1" id="cb22" />
+    <label for="cb22">其他</label><input name="othes" id="cb22" type="text" required />
+  </div>
+<p>
+<br>
+<div id="satisfaction">
+<h4>*6.截至目前為止，您對EQL產品的滿意度</h4>
+<h5>　　(非常不滿意:1分＜＝＝＞非常滿意7分）</h5>
+<fieldset>
+  <input type="radio" name="rd2" id="point1"/>
+  <label class="class1" for="point1"><br>1</label>
+
+  <input type="radio" name="rd2" id="point2"/>
+<label class="class1" for="point2"><br>2</label>
+
+  <input type="radio" name="rd2" id="point3"/>
+  <label class="class1" for="point3"><br>3</label>
+
+  <input type="radio" name="rd2" id="point4"/>
+  <label class="class1" for="point4"><br>4</label>
+
+  <input type="radio" name="rd2" id="point5"/>
+  <label class="class1" for="point5"><br>5</label>
+
+  <input type="radio" name="rd2" id="point6"/>
+  <label class="class1" for="point6"><br>6</label>
+
+  <input type="radio" name="rd2" id="point7"/>
+  <label class="class1" for="point7"><br>7</label>
+
+</fieldset>
+</div>
+<p>
+  <br>
+  <div id="recommend">
+<h4>*7.是否會推薦朋友使用EQL產品</h4>
+<input type="radio" name="rd3" id="yes" />
+  <label for="yes">是</label>
+  <input type="radio" name="rd3" id="no" />
+  <label for="no">否</label>
+</div>
+<p>
+  <br>
+  <div id="Suggest">
+<h4>8.建議：歡迎分享一些使用的小故事</h4>
+<textarea style="width:500px;height:100px;">
+
+</textarea>
+</div>
+<p>
+  <p>
+  <div id="send_button">
+<button class="btn btn-primary" type="submit" id="cf-submit" name="submit">送 出</button>
+
+</div>
+
+</form>
+</div>
+
+
+</body>
+</html>
